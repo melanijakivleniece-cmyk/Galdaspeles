@@ -1,14 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirks - Galda Spēle</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>
-  <p>Melānija Kivleniece</p>
-  </h1>
+    <!-- GALVENE -->
+    <header>
+        <div class="header-container">
+            <h1>🎪 CIRKS</h1>
+            <p class="tagline">Aizraujošā galda spēle ģimeniski un draugiem</p>
+        </div>
+    </header>
+
+    <!-- NAVIGĀCIJAS IZVĒLNE -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menuToggle">☰ IZVĒLNE</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Sākumlapa</a></li>
+                <li><a href="#about">Par spēli</a></li>
+                <li><a href="#gallery">Galerija</a></li>
+                <li><a href="#faq">BUJ</a></li>
+                <li><a href="#contact">Kontakti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SĀKUMLAPA -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Laipni lūdzam Cirka pasaulē!</h2>
+            <p>Aizraujoša un smieklīga spēle visai ģimenei</p>
+            <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Uzzini vairāk</button>
+        </div>
+    </section>
+
+    <!-- PAR SPĒLI -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Par spēli "Cirks"</h2>
+                <p>
+                    "Cirks" ir klasiska galda spēle, kas radīta smieklīgiem un aizraujoša laika pavadīšanai. 
+                    Spēles mērķis ir kļūt par cirka direktoru un vadīt savu akrobiātu un žonglieri komandu 
+                    uz uzvaru. Spēle apvieno stratēģiju, laimi un daudz smieklīgu momentu!
+                </p>
+                <h3>Spēles noteikumi:</h3>
+                <ul>
+                    <li>Spēlē piedalās 2-6 spēlētāji</li>
+                    <li>Katra gājiena laikā jāmet spēļu kauliņš</li>
+                    <li>Pārvietojiet savus žetone pēc kauliņa rādītā skaitļa</li>
+                    <li>Pirmais, kas sasniedz finišu, uzvar!</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="images/cirks-main.jpg" alt="Cirks spēles galvenā attēls" class="main-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOTOGALERIJA -->
+    <section id="gallery" class="gallery">
+        <h2>Spēles Fotogalerija</h2>
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Visi</button>
+            <button class="filter-btn" data-filter="board">Galdiņš</button>
+            <button class="filter-btn" data-filter="pieces">Figūras</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Galerijas attēli --></div>
+    </section>
+
+    <!-- BUJ (BIEŽĀK UZDOTIE JAUTĀJUMI) -->
+    <section id="faq" class="faq">
+        <h2>Biežāk Uzdotie Jautājumi</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Cik ilgi ilgst viena spēle?</h3>
+                <p class="faq-answer">Vidēji 20-30 minūtes, atkarībā no spēlētāju skaita un pieredzes.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">❓ No cik gadu vecuma var spēlēt?</h3>
+                <p class="faq-answer">No 6 gadu vecuma un visiem pieaugušajiem.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">❓ Vai spēli var spēlēt online?</h3>
+                <p class="faq-answer">Nē, tā ir tradicionāla galda spēle pāris vai grupas spēlēšanai.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKTFORMA -->
+    <section id="contact" class="contact">
+        <h2>Saziņa ar mums</h2>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="name">Vārds:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-pasts:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Telefons:</label>
+                <input type="tel" id="phone" name="phone">
+                <span class="error" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Tēma:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">-- Izvēlieties tēmu --</option>
+                    <option value="question">Jautājums par spēli</option>
+                    <option value="purchase">Vēlētos iegādāties</option>
+                    <option value="feedback">Atsauksme</option>
+                    <option value="other">Cits</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Ziņojums:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Abonēt mūsu jaunumus</label>
+            </div>
+
+            <button type="submit" class="submit-button">Nosūtīt</button>
+            <div id="successMessage" class="success-message"></div>
+        </form>
+    </section>
+
+    <!-- KĀJENE -->
+    <footer>
+        <p>&copy; 2026 Cirks Galda Spēle. Visas tiesības paturētas. | Veidojis: Melānija</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
   
