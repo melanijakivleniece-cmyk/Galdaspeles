@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galda spēle "Cirks" - Spēles apraksts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, rgba(255,200,100,0.15) 0%, transparent 100%);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #ffd700, #ff8c00, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: none;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #ffd700;
+            font-style: italic;
+        }
+        
+        .game-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+        
+        .section h2 {
+            color: #ffd700;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255,215,0,0.3);
+        }
+        
+        .section p, .section li {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+        
+        .section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .info-card {
+            background: rgba(255,215,0,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        
+        .info-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .info-card .label {
+            color: #ffd700;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .info-card .value {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        
+        .rules-list li::marker {
+            color: #ffd700;
+        }
+        
+        .highlight {
+            background: rgba(255,215,0,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #ffd700;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .section {
+                padding: 15px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="game-icon">🎪</div>
+            <h1>CIRKS</h1>
+            <p class="subtitle">Klasiska galda spēle visai ģimenei</p>
+        </header>
+        
+        <div class="section">
+            <h2>📝 Spēles apraksts</h2>
+            <p>"Cirks" ir aizraujoša galda spēle, kurā spēlētāji sacenšas, lai savāktu pēc iespējas vairāk punktu, apmeklējot dažādas cirka izklaides. Spēles gaitā jūs pārvietojaties pa spēles laukumu, izpildāt uzdevumus un cenšaties būt pirmais, kurš sasniedz finišu.</p>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Spēles noteikumi</h2>
+            <ul class="rules-list">
+                <li><strong>Spēles sagatavošana:</strong> Katrs spēlētājs izvēlas savu spēles figūriņu un novieto to uz starta laukuma.</li>
+                <li><strong>Kustība:</strong> Spēlētāji met kauliņu pēc kārtas un pārvieto savu figūriņu par izmestu soļu skaitu.</li>
+                <li><strong>Uzdevumi:</strong> Dažādos laukumos ir īpaši uzdevumi, kurus izpildot var iegūt papildus punktus.</li>
+                <li><strong>Bonusa laukumi:</strong> Ir īpaši laukumi, kas dod iespēju iegūt bonusus vai attīstīt savu cirku.</li>
+                <li><strong>Uzvarētājs:</strong> Spēle beidzas, kad kāds spēlētājs sasniedz finiša laukumu. Uzvar tas, kurš ir savācis visvairāk punktu.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>⏱️ Spēles ilgums</h2>
+            <p>Parasta spēles ilgums ir no <span class="highlight">30 līdz 60 minūtēm</span>. Tas ir atkarīgs no spēlētāju skaita un viņu pieredzes. Īsākā spēle var būt tikai 20 minūtes, ja visi spēlētāji ir pieredzējuši un zina noteikumus.</p>
+        </div>
+        
+        <div class="section">
+            <h2>👶 Vecuma ierobežojums</h2>
+            <p>Spēle ir piemērota bērniem no <span class="highlight">6 gadu vecuma</span>. Tomēr jaunāki bērni var spēlēt kopā ar vecākiem, kuri palīdz izprast noteikumus. Spēle attīsta loģisko domāšanu, skaitīšanas prasmes un stratēģisko plānošanu.</p>
+        </div>
+        
+        <div class="section">
+            <h2>👥 Spēlētāju skaits</h2>
+            <p>Spēli var spēlēt no <span class="highlight">2 līdz 4 spēlētājiem</span>. Optimālais spēlētāju skaits ir 3-4 dalībnieki, jo tad ir visinteresantākā konkurence.</p>
+        </div>
+        
+        <div class="section">
+            <h2>🎁 Kas iekļauts komplektā</h2>
+            <ul>
+                <li>Spēles laukums ar dažādiem laukumiem un izklaides zonām</li>
+                <li>4 spēles figūriņas dažādās krāsās</li>
+                <li>Spēles kauliņš</li>
+                <li>Kartīšu kava ar uzdevumiem un bonusiem</li>
+                <li>Punktu žetoni</li>
+                <li>Instrukcija latviešu valodā</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>💡 Padomi un stratēģija</h2>
+            <ul>
+                <li><strong>Plānojiet uz priekšu:</strong> Sekojiet citu spēlētāju pozīcijām un plānojiet savus gājienus.</li>
+                <li><strong>Izmantojiet bonusus:</strong> Neizlaidiet iespēju iegūt papildus punktus no bonusa laukumiem.</li>
+                <li><strong>Uzmanieties no pretiniekiem:</strong> Dažos laukumos var zaudēt punktus, ja citi spēlētāji jūs panāk.</li>
+                <li><strong>Balansējiet riskus:</strong> Dažreiz ir vērts mēģināt tālākais lēciens, bet citreiz - drošs solis uz priekšu.</li>
+            </ul>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="icon">⏰</div>
+                <div class="label">Spēles ilgums</div>
+                <div class="value">30-60 min</div>
+            </div>
+            <div class="info-card">
+                <div class="icon">👶</div>
+                <div class="label">No vecuma</div>
+                <div class="value">6+ gadi</div>
+            </div>
+            <div class="info-card">
+                <div class="icon">👥</div>
+                <div class="label">Spēlētāji</div>
+                <div class="value">2-4</div>
+            </div>
+            <div class="info-card">
+                <div class="icon">🏆</div>
+                <div class="label">Uzvarētājs</div>
+                <div class="value">Vairāk punktu</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🎪 "Cirks" - izklaidējoša spēle visai ģimenei! 🎪</p>
+        </footer>
+    </div>
+</body>
+</html>
